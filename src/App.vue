@@ -37,6 +37,36 @@
                 </ul>
             </div>
         </div>
+
+        <div class="col-sm-3 col-lg-2">
+            <div class="card card-inverse card-danger">
+                <div class="card-block">
+                    <div class="h1 text-muted text-right mb-2"><i class="fa fa-usd fa-lg"></i></div>
+                    <div class="h4 mb-0">$ 420.000</div>
+                    <small class="text-muted text-uppercase font-weight-bold">Total funds</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3 col-lg-2">
+            <div class="card card-inverse card-success">
+                <div class="card-block">
+                    <div class="h1 text-muted text-right mb-2"><i class="fa fa-users fa-lg"></i></div>
+                    <div class="h4 mb-0">3 498</div>
+                    <small class="text-muted text-uppercase font-weight-bold">Total backers</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3 col-lg-2">
+            <div class="card card-inverse card-warning">
+                <div class="card-block">
+                    <div class="h1 text-muted text-right mb-2"><i class="fa fa-sticky-note fa-lg"></i></div>
+                    <div class="h4 mb-0">928</div>
+                    <small class="text-muted text-uppercase font-weight-bold">Total ZenDesk tickets</small>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
