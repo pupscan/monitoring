@@ -1,7 +1,6 @@
 {
   "name": "monitoring",
   "version": "1.0.0",
-  "main": "index.js",
   "author": "Thibaut Mottet <thibaut.mottet@pupscan.com>",
   "license": "WTFPL",
   "scripts": {
