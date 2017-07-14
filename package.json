@@ -8,7 +8,9 @@
     "build": "./node_modules/.bin/poi build"
   },
   "dependencies": {
-    "vue": "^2.4.1"
+    "chart.js": "^2.6.0",
+    "vue": "^2.4.1",
+    "vue-chartjs": "^2.7.1"
   },
   "devDependencies": {
     "node-sass": "^4.5.3",
