@@ -1,6 +1,6 @@
 <template>
     <div class="echarts">
-        <IEcharts :option="bar" @ready="onReady" @click="onClick"></IEcharts>
+        <IEcharts :option="options"></IEcharts>
     </div>
 </template>
 
@@ -32,7 +32,7 @@
             IEcharts
         },
         data: () => ({
-            bar: {
+            options: {
                 tooltip: {
                     trigger: 'axis',
                     position: function (pt) {
@@ -40,7 +40,7 @@
                     }
                 },
                 grid: {
-                    left: '3%',
+                    left: '0%',
                     right: '3%',
                     bottom: '3%',
                     top: '3%',
@@ -130,15 +130,7 @@
                     }
                 ]
             }
-        }),
-        methods: {
-            onReady (instance) {
-                console.log(instance);
-            },
-            onClick (event, instance, echarts) {
-                console.log(arguments);
-            }
-        }
+        })
     }
 </script>
 
