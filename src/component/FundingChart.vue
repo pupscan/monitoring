@@ -8,7 +8,7 @@
     import IEcharts from 'vue-echarts-v3/src/full.vue'
 
     // const brandPrimary = '#20a8d8'
-    const brandSuccess = '#4dbd74'
+    const brandSuccess = '#31bd6e'
     const brandInfo = '#63c2de'
     const brandDanger = '#f86c6b'
 
@@ -20,10 +20,6 @@
 
         const result = 'rgba(' + r + ',' + g + ',' + b + ',' + opacity / 100 + ')'
         return result
-    }
-
-    function random (min, max) {
-        return Math.floor(Math.random() * (max - min + 1) + min)
     }
 
     export default {
@@ -41,14 +37,13 @@
                 },
                 grid: {
                     left: '0%',
-                    right: '3%',
+                    right: '1%',
                     bottom: '3%',
                     top: '3%',
                     containLabel: true
                 },
                 xAxis: {
                     type: 'category',
-                    boundaryGap: false,
                     axisLine: {
                         lineStyle: {
                             color: '#a1a5a6'
@@ -62,33 +57,38 @@
                             color: '#5c6061'
                         }
                     },
-                    data: ['M', 'T', 'W', 'T', 'F', 'S', 'S', 'M', 'T', 'W', 'T', 'F', 'S', 'S', 'M', 'T', 'W', 'T', 'F', 'S', 'S', 'M', 'T', 'W', 'T', 'F', 'S', 'S']
+                    data: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31']
                 },
-                yAxis: {
-                    splitNumber: 3,
-                    axisLine: {
-                        lineStyle: {
-                            color: "#dde1e2"
+                yAxis: [
+                    {
+                        splitNumber: 3,
+                        axisLine: {
+                            lineStyle: {
+                                color: "#dde1e2"
+                            }
+                        },
+                        splitLine: {
+                            lineStyle: {
+                                color: "#dde1e2"
+                            }
+                        },
+                        axisTick: {
+                            length: 8,
+                            show: true,
+                            lineStyle: {
+                                color: "#dde1e2"
+                            }
+                        },
+                        axisLabel: {
+                            textStyle: {
+                                color: '#5c6061'
+                            }
                         }
                     },
-                    splitLine: {
-                        lineStyle: {
-                            color: "#dde1e2"
-                        }
-                    },
-                    axisTick: {
-                        length: 8,
-                        show: true,
-                        lineStyle: {
-                            color: "#dde1e2"
-                        }
-                    },
-                    axisLabel: {
-                        textStyle: {
-                            color: '#5c6061'
-                        }
+                    {
+                        show: false
                     }
-                },
+                ],
                 series: [
                     {
                         name: 'Funds',
@@ -106,7 +106,7 @@
                                 color: convertHex(brandInfo, 10)
                             }
                         },
-                        data: [193, 138, 121, 54, 145, 106, 126, 59, 135, 166, 105, 125, 89, 128, 113, 102, 103, 196, 61, 130, 99, 56, 98, 137, 139, 83, 189, 106]
+                        data: [193, 138, 121, 54, 145, 106, 126, 59, 135, 166, 105, 125, 89, 128, 113, 102, 103, 196, 61, 130, 99, 56, 98, 137, 139, 83, 189, 106, 137, 139]
                     },
                     {
                         name: 'Goals',
@@ -126,8 +126,30 @@
                                 color: 'blue'
                             }
                         },
-                        data: [320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320,]
-                    }
+                        data: [320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320]
+                    },
+                    {
+                        name: 'Backers',
+                        type: 'bar',
+                        yAxisIndex: 1,
+                        barCategoryGap: '40%',
+                        label: {
+                            normal: {
+                                show: true,
+                                position: 'top',
+                                textStyle: {
+                                    color: brandSuccess,
+                                    fontWeight: 'bold'
+                                }
+                            }
+                        },
+                        itemStyle: {
+                            normal: {
+                                color: convertHex(brandSuccess, 50)
+                            }
+                        },
+                        data: [3, 8, 13, 2, 3, 6, 1, 0, 9, 6, 8, 7, 1, 3, 19, 10, 3, 1, 1, 5, 1, 6, 16, 5, 5, 1, 5, 5, 9, 12]
+                    },
                 ]
             }
         })

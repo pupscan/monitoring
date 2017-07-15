@@ -63,7 +63,7 @@
         </div>
 
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-md-12 col-xl-6">
                 <div class="card">
                     <div class="card-block">
                         <div class="row">
@@ -92,7 +92,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-md-12 col-xl-6">
                 <div class="card">
                     <div class="card-block">
                         <div class="row">
