@@ -44,8 +44,10 @@
             <div class="col-sm-6 col-lg-4">
                 <div class="card card-inverse card-danger">
                     <div class="card-block">
-                        <div class="h1 text-muted text-right mb-2"><i class="fa fa-usd fa-lg"></i></div>
-                        <div class="h4 mb-0">$ 420.000</div>
+                        <div class="h1 text-muted text-right mb-2">
+                            <i class="fa fa-usd fa-lg"></i>
+                        </div>
+                        <div class="h1 mb-0">$ 420.000</div>
                         <small class="text-muted text-uppercase font-weight-bold">Total funds</small>
                     </div>
                 </div>
@@ -54,8 +56,10 @@
             <div class="col-sm-6 col-lg-2">
                 <div class="card card-inverse card-success">
                     <div class="card-block">
-                        <div class="h1 text-muted text-right mb-2"><i class="fa fa-users fa-lg"></i></div>
-                        <div class="h4 mb-0">3 498</div>
+                        <div class="h1 text-muted text-right mb-2">
+                            <i class="fa fa-users fa-lg"></i>
+                        </div>
+                        <div class="h1 mb-0">3 498</div>
                         <small class="text-muted text-uppercase font-weight-bold">Total backers</small>
                     </div>
                 </div>
@@ -75,17 +79,17 @@
                             <div class="col-sm-6 col-md-4">
                                 <div class="callout callout-info">
                                     <small class="text-muted">Total fund</small>
-                                    <br> <strong class="h4">$ 23 000</strong></div>
+                                    <br> <strong class="h2">$ 23 000</strong></div>
                             </div>
                             <div class="col-sm-6 col-md-4">
                                 <div class="callout callout-danger">
                                     <small class="text-muted">Fund goal</small>
-                                    <br> <strong class="h4">$ 40 000</strong></div>
+                                    <br> <strong class="h2">$ 40 000</strong></div>
                             </div>
                             <div class="col-sm-6 col-md-4">
                                 <div class="callout callout-success">
                                     <small class="text-muted">Total backers</small>
-                                    <br> <strong class="h4">3 023</strong></div>
+                                    <br> <strong class="h2">3 023</strong></div>
                             </div>
                         </div>
                         <funding-chart class="chart-wrapper"></funding-chart>
@@ -104,17 +108,17 @@
                             <div class="col-sm-6 col-md-4">
                                 <div class="callout callout-info">
                                     <small class="text-muted">Total fund</small>
-                                    <br> <strong class="h4">$ 23 000</strong></div>
+                                    <br> <strong class="h2">$ 23 000</strong></div>
                             </div>
                             <div class="col-sm-6 col-md-4">
                                 <div class="callout callout-danger">
                                     <small class="text-muted">Fund goal</small>
-                                    <br> <strong class="h4">$ 40 000</strong></div>
+                                    <br> <strong class="h2">$ 40 000</strong></div>
                             </div>
                             <div class="col-sm-6 col-md-4">
                                 <div class="callout callout-success">
                                     <small class="text-muted">Total backers</small>
-                                    <br> <strong class="h4">3 023</strong></div>
+                                    <br> <strong class="h2">3 023</strong></div>
                             </div>
                         </div>
                         <funding-chart class="chart-wrapper"></funding-chart>
