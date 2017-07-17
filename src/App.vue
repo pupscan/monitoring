@@ -42,7 +42,7 @@
             </div>
 
             <div class="col-sm-6 col-lg-4">
-                <div class="card card-inverse card-danger">
+                <div class="card card-inverse card-success">
                     <div class="card-block">
                         <div class="h1 text-muted text-right mb-2">
                             <i class="fa fa-usd fa-lg"></i>
@@ -54,7 +54,7 @@
             </div>
 
             <div class="col-sm-6 col-lg-2">
-                <div class="card card-inverse card-success">
+                <div class="card card-inverse card-info">
                     <div class="card-block">
                         <div class="h1 text-muted text-right mb-2">
                             <i class="fa fa-users fa-lg"></i>

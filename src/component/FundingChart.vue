@@ -43,6 +43,7 @@
                     containLabel: true
                 },
                 xAxis: {
+                    boundaryGap: false,
                     type: 'category',
                     axisLine: {
                         lineStyle: {
@@ -59,7 +60,7 @@
                     },
                     data: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31']
                 },
-                yAxis: [
+                yAxis:
                     {
                         splitNumber: 3,
                         axisLine: {
@@ -85,10 +86,6 @@
                             }
                         }
                     },
-                    {
-                        show: false
-                    }
-                ],
                 series: [
                     {
                         name: 'Funds',
@@ -127,29 +124,7 @@
                             }
                         },
                         data: [320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320]
-                    },
-                    {
-                        name: 'Backers',
-                        type: 'bar',
-                        yAxisIndex: 1,
-                        barCategoryGap: '40%',
-                        label: {
-                            normal: {
-                                show: true,
-                                position: 'top',
-                                textStyle: {
-                                    color: brandSuccess,
-                                    fontWeight: 'bold'
-                                }
-                            }
-                        },
-                        itemStyle: {
-                            normal: {
-                                color: convertHex(brandSuccess, 50)
-                            }
-                        },
-                        data: [3, 8, 13, 2, 3, 6, 1, 0, 9, 6, 8, 7, 1, 3, 19, 10, 3, 1, 1, 5, 1, 6, 16, 5, 5, 1, 5, 5, 9, 12]
-                    },
+                    }
                 ]
             }
         })
