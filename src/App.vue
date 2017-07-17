@@ -11,11 +11,11 @@
                     <ul>
                         <li>
                             <strong>89k</strong>
-                            <span>friends</span>
+                            <span>followers</span>
                         </li>
                         <li>
-                            <strong>459</strong>
-                            <span>feeds</span>
+                            <strong>459 <span>1382</span></strong>
+                            <span>like</span>
                         </li>
                     </ul>
                 </div>
@@ -30,12 +30,12 @@
                     </div>
                     <ul>
                         <li>
-                            <strong>973k</strong>
+                            <strong>973 <span>149</span></strong>
                             <span>followers</span>
                         </li>
                         <li>
                             <strong>1.792</strong>
-                            <span>tweets</span>
+                            <span>like</span>
                         </li>
                     </ul>
                 </div>
@@ -76,20 +76,25 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-6 col-md-4">
+                            <div class="col-sm-6 col-md-3">
                                 <div class="callout callout-info">
                                     <small class="text-muted">Total fund</small>
                                     <br> <strong class="h2">$ 23 000</strong></div>
                             </div>
-                            <div class="col-sm-6 col-md-4">
+                            <div class="col-sm-6 col-md-3">
                                 <div class="callout callout-danger">
                                     <small class="text-muted">Fund goal</small>
                                     <br> <strong class="h2">$ 40 000</strong></div>
                             </div>
-                            <div class="col-sm-6 col-md-4">
+                            <div class="col-sm-6 col-md-3">
                                 <div class="callout callout-success">
-                                    <small class="text-muted">Total backers</small>
-                                    <br> <strong class="h2">3 023</strong></div>
+                                    <small class="text-muted">Fund reached</small>
+                                    <br> <strong class="h2">38 %</strong></div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="callout callout-warning">
+                                    <small class="text-muted">Last mount fund</small>
+                                    <br> <strong class="h2">$ 36 890</strong></div>
                             </div>
                         </div>
                         <funding-chart class="chart-wrapper"></funding-chart>
@@ -105,20 +110,25 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-6 col-md-4">
+                            <div class="col-sm-6 col-md-3">
                                 <div class="callout callout-info">
                                     <small class="text-muted">Total fund</small>
                                     <br> <strong class="h2">$ 23 000</strong></div>
                             </div>
-                            <div class="col-sm-6 col-md-4">
+                            <div class="col-sm-6 col-md-3">
                                 <div class="callout callout-danger">
                                     <small class="text-muted">Fund goal</small>
                                     <br> <strong class="h2">$ 40 000</strong></div>
                             </div>
-                            <div class="col-sm-6 col-md-4">
+                            <div class="col-sm-6 col-md-3">
                                 <div class="callout callout-success">
-                                    <small class="text-muted">Total backers</small>
-                                    <br> <strong class="h2">3 023</strong></div>
+                                    <small class="text-muted">Fund reached</small>
+                                    <br> <strong class="h2">38 %</strong></div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="callout callout-warning">
+                                    <small class="text-muted">Last mount fund</small>
+                                    <br> <strong class="h2">$ 36 890</strong></div>
                             </div>
                         </div>
                         <funding-chart class="chart-wrapper"></funding-chart>
