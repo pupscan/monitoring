@@ -11,4 +11,4 @@ RUN yarn build
 
 EXPOSE 8080
 
-CMD http-server -g -c864000 /workspace/dist
+CMD http-server -g -c5184000 /workspace/dist
