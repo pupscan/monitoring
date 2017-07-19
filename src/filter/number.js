@@ -1,9 +1,11 @@
 const digitsRE = /(\d{3})(?=\d)/g
 
-export function number(value, decimals) {
+export function number(value, decimals, suffix, prefix) {
     value = parseFloat(value)
     if (!isFinite(value) || (!value && value !== 0)) return ''
     decimals = decimals !== null ? decimals : 2
+    let before = suffix || ''
+    let after = prefix || ''
     let stringified = Math.abs(value).toFixed(decimals)
     let _int = decimals
         ? stringified.slice(0, -1 - decimals)
@@ -16,7 +18,8 @@ export function number(value, decimals) {
         ? stringified.slice(-1 - decimals)
         : ''
     let sign = value < 0 ? '-' : ''
-    return sign + head +
+    return before + sign + head +
         _int.slice(i).replace(digitsRE, '$1 ') +
-        _float
+        _float +
+        after
 }
