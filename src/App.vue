@@ -2,43 +2,11 @@
     <div class="animated fadeIn">
         <div class="row">
             <div class="col-sm-6 col-lg-3">
-                <div class="social-box facebook">
-                    <i class="fa fa-facebook"></i>
-                    <div class="chart-wrapper">
-                        <social-chart
-                                :data="[65, 59, 84, 84, 51, 55, 40, 59, 84, 84, 51, 55, 40, 59, 84, 84, 51, 55, 40]"/>
-                    </div>
-                    <ul>
-                        <li>
-                            <strong>89k</strong>
-                            <span>followers</span>
-                        </li>
-                        <li>
-                            <strong>459 <span>1382</span></strong>
-                            <span>like</span>
-                        </li>
-                    </ul>
-                </div>
+                <twitter></twitter>
             </div>
 
             <div class="col-sm-6 col-lg-3">
-                <div class="social-box twitter">
-                    <i class="fa fa-twitter"></i>
-                    <div class="chart-wrapper">
-                        <social-chart
-                                :data="[1, 13, 9, 17, 34, 41, 38, 59, 84, 84, 51, 55, 40, 59, 84, 84, 51, 55, 40]"/>
-                    </div>
-                    <ul>
-                        <li>
-                            <strong>973 <span>149</span></strong>
-                            <span>followers</span>
-                        </li>
-                        <li>
-                            <strong>1.792</strong>
-                            <span>like</span>
-                        </li>
-                    </ul>
-                </div>
+                <facebook></facebook>
             </div>
 
             <div class="col-sm-6 col-lg-4">
@@ -124,17 +92,19 @@
 </template>
 
 <script>
-    import SocialChart from './component/SocialBox'
     import FundingChart from './component/FundingChart'
     import TotalFund from './component/TotalFund'
     import TotalBacker from './component/TotalBacker'
+    import Twitter from './component/Twitter'
+    import Facebook from './component/Facebook'
 
-    const refreshIntervalInMs = (process.env.REFRESH_INTERVAL_S || 60) * 1000
+    const refreshIntervalInMs = (process.env.REFRESH_INTERVAL_S || 10) * 1000
 
     export default {
         name: 'dashboard',
         components: {
-            SocialChart,
+            Twitter,
+            Facebook,
             FundingChart,
             TotalFund,
             TotalBacker

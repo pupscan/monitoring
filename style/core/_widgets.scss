@@ -7,7 +7,7 @@
   border: $card-border-width solid $card-border-color;
   @include border-radius($card-border-radius);
 
-  i {
+  i.social-icon {
     display: block;
     margin: -1px -1px 0;
     font-size: 40px;
@@ -56,28 +56,28 @@
   }
 
   &.facebook {
-    i {
+    i.social-icon {
       color: #fff;
       background: $facebook;
     }
   }
 
   &.twitter {
-    i {
+    i.social-icon {
       color: #fff;
       background: $twitter;
     }
   }
 
   &.linkedin {
-    i {
+    i.social-icon {
       color: #fff;
       background: $linkedin;
     }
   }
 
   &.google-plus {
-    i {
+    i.social-icon {
       color: #fff;
       background: $google-plus;
     }
