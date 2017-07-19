@@ -42,15 +42,7 @@
             </div>
 
             <div class="col-sm-6 col-lg-4">
-                <div class="card card-inverse card-success">
-                    <div class="card-block">
-                        <div class="h1 text-muted text-right mb-2">
-                            <i class="fa fa-usd fa-lg"></i>
-                        </div>
-                        <div class="h1 mb-0">$ 420.000</div>
-                        <small class="text-muted text-uppercase font-weight-bold">Total funds</small>
-                    </div>
-                </div>
+                <total-fund></total-fund>
             </div>
 
             <div class="col-sm-6 col-lg-2">
@@ -142,13 +134,21 @@
 <script>
     import SocialChart from './component/SocialBox'
     import FundingChart from './component/FundingChart'
+    import TotalFund from './component/TotalFund'
 
 
     export default {
         name: 'dashboard',
         components: {
             SocialChart,
-            FundingChart
+            FundingChart,
+            TotalFund
+        },
+        created() {
+            this.$store.dispatch('fetchAll')
+            setInterval(function () {
+                this.$store.dispatch('fetchAll')
+            }.bind(this), 5000);
         }
     }
 </script>

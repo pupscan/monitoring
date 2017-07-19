@@ -3,15 +3,18 @@
   "version": "1.0.0",
   "author": "Thibaut Mottet <thibaut.mottet@pupscan.com>",
   "license": "WTFPL",
+  "main": "main.js",
   "scripts": {
     "dev": "./node_modules/.bin/poi",
     "build": "./node_modules/.bin/poi build"
   },
   "dependencies": {
+    "axios": "^0.16.2",
     "chart.js": "^2.6.0",
     "vue": "^2.4.1",
     "vue-chartjs": "^2.7.1",
-    "vue-echarts-v3": "^1.0.4"
+    "vue-echarts-v3": "^1.0.4",
+    "vuex": "^2.3.1"
   },
   "devDependencies": {
     "node-sass": "^4.5.3",
