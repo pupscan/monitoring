@@ -1,6 +1,9 @@
 FROM kkarczmarczyk/node-yarn:latest
 MAINTAINER thibaut.mottet@pupscan.fr
 
+ENV REFRESH_INTERVAL_S 600
+ENV API_BASE_URL http://api.metric.pupscan.com/
+
 RUN yarn global add http-server
 
 WORKDIR /workspace
