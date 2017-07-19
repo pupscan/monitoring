@@ -46,15 +46,7 @@
             </div>
 
             <div class="col-sm-6 col-lg-2">
-                <div class="card card-inverse card-info">
-                    <div class="card-block">
-                        <div class="h1 text-muted text-right mb-2">
-                            <i class="fa fa-users fa-lg"></i>
-                        </div>
-                        <div class="h1 mb-0">3 498</div>
-                        <small class="text-muted text-uppercase font-weight-bold">Total backers</small>
-                    </div>
-                </div>
+                <total-backer></total-backer>
             </div>
         </div>
 
@@ -135,20 +127,22 @@
     import SocialChart from './component/SocialBox'
     import FundingChart from './component/FundingChart'
     import TotalFund from './component/TotalFund'
+    import TotalBacker from './component/TotalBacker'
 
+    const refreshIntervalInMs = (process.env.REFRESH_INTERVAL_S || 60) * 1000
 
     export default {
         name: 'dashboard',
         components: {
             SocialChart,
             FundingChart,
-            TotalFund
+            TotalFund,
+            TotalBacker
         },
         created() {
-            this.$store.dispatch('fetchAll')
             setInterval(function () {
                 this.$store.dispatch('fetchAll')
-            }.bind(this), 5000);
+            }.bind(this), refreshIntervalInMs);
         }
     }
 </script>
