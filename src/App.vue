@@ -20,95 +20,32 @@
 
         <div class="row">
             <div class="col-md-12 col-xl-6">
-                <div class="card">
-                    <div class="card-block">
-                        <div class="row">
-                            <div class="col-sm-5">
-                                <h4 class="card-title mb-0">Indiegogo</h4>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-6 col-md-3">
-                                <div class="callout callout-info">
-                                    <small class="text-muted">Total fund</small>
-                                    <br> <strong class="h2">$ 23 000</strong></div>
-                            </div>
-                            <div class="col-sm-6 col-md-3">
-                                <div class="callout callout-danger">
-                                    <small class="text-muted">Fund goal</small>
-                                    <br> <strong class="h2">$ 40 000</strong></div>
-                            </div>
-                            <div class="col-sm-6 col-md-3">
-                                <div class="callout callout-success">
-                                    <small class="text-muted">Fund reached</small>
-                                    <br> <strong class="h2">38 %</strong></div>
-                            </div>
-                            <div class="col-sm-6 col-md-3">
-                                <div class="callout callout-warning">
-                                    <small class="text-muted">Last mount fund</small>
-                                    <br> <strong class="h2">$ 36 890</strong></div>
-                            </div>
-                        </div>
-                        <funding-chart class="chart-wrapper"></funding-chart>
-                    </div>
-                </div>
+                <indiegogo></indiegogo>
             </div>
             <div class="col-md-12 col-xl-6">
-                <div class="card">
-                    <div class="card-block">
-                        <div class="row">
-                            <div class="col-sm-5">
-                                <h4 class="card-title mb-0">KissKissBankBank</h4>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-6 col-md-3">
-                                <div class="callout callout-info">
-                                    <small class="text-muted">Total fund</small>
-                                    <br> <strong class="h2">$ 23 000</strong></div>
-                            </div>
-                            <div class="col-sm-6 col-md-3">
-                                <div class="callout callout-danger">
-                                    <small class="text-muted">Fund goal</small>
-                                    <br> <strong class="h2">$ 40 000</strong></div>
-                            </div>
-                            <div class="col-sm-6 col-md-3">
-                                <div class="callout callout-success">
-                                    <small class="text-muted">Fund reached</small>
-                                    <br> <strong class="h2">38 %</strong></div>
-                            </div>
-                            <div class="col-sm-6 col-md-3">
-                                <div class="callout callout-warning">
-                                    <small class="text-muted">Last mount fund</small>
-                                    <br> <strong class="h2">$ 36 890</strong></div>
-                            </div>
-                        </div>
-                        <funding-chart class="chart-wrapper"></funding-chart>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-    import FundingChart from './component/FundingChart'
+    import Indiegogo from './component/Indiegogo'
     import TotalFund from './component/TotalFund'
     import TotalBacker from './component/TotalBacker'
     import Twitter from './component/Twitter'
     import Facebook from './component/Facebook'
 
     const debug = process.env.NODE_ENV !== 'production'
-    const refreshIntervalInMs = (debug ? 10 : 300) * 1000 // 10 seconds or 5 minutes
+    const refreshIntervalInMs = (debug ? 20 : 300) * 1000 // 10 seconds or 5 minutes
 
     export default {
         name: 'dashboard',
         components: {
             Twitter,
             Facebook,
-            FundingChart,
             TotalFund,
-            TotalBacker
+            TotalBacker,
+            Indiegogo,
         },
         created() {
             setInterval(function () {

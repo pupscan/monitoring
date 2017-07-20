@@ -1,6 +1,6 @@
 <template>
     <div class="echarts">
-        <IEcharts :option="options"></IEcharts>
+        <IEcharts :option="options" :loading="status"></IEcharts>
     </div>
 </template>
 
@@ -12,7 +12,7 @@
     const brandInfo = '#63c2de'
     const brandDanger = '#f86c6b'
 
-    function convertHex (hex, opacity) {
+    function convertHex(hex, opacity) {
         hex = hex.replace('#', '')
         const r = parseInt(hex.substring(0, 2), 16)
         const g = parseInt(hex.substring(2, 4), 16)
@@ -22,8 +22,13 @@
         return result
     }
 
+    function kFormatter(num) {
+        if (num === 0) return ''
+        return num > 999 ? (num/1000).toFixed(0) + 'k' : num
+    }
+
     export default {
-        props: [],
+        props: ['status', 'goal', 'fund'],
         components: {
             IEcharts
         },
@@ -62,7 +67,8 @@
                 },
                 yAxis:
                     {
-                        splitNumber: 3,
+                        max: 50000,
+                        splitNumber: 4,
                         axisLine: {
                             lineStyle: {
                                 color: "#dde1e2"
@@ -89,10 +95,22 @@
                 series: [
                     {
                         name: 'Funds',
-                        type: 'line',
+                        type: 'bar',
                         smooth: true,
                         symbol: 'none',
                         sampling: 'average',
+                        label: {
+                            normal: {
+                                show: true,
+                                position: 'top',
+                                formatter: (params) => kFormatter(params.value),
+                                textStyle: {
+                                    color: brandInfo,
+                                    fontWeight: 'bold',
+                                    fontSize: 17,
+                                }
+                            }
+                        },
                         itemStyle: {
                             normal: {
                                 color: brandInfo
@@ -103,10 +121,10 @@
                                 color: convertHex(brandInfo, 10)
                             }
                         },
-                        data: [193, 138, 121, 54, 145, 106, 126, 59, 135, 166, 105, 125, 89, 128, 113, 102, 103, 196, 61, 130, 99, 56, 98, 137, 139, 83, 189, 106, 137, 139]
+                        data: [],
                     },
                     {
-                        name: 'Goals',
+                        name: 'Goal',
                         type: 'line',
                         smooth: true,
                         symbol: 'none',
@@ -123,11 +141,23 @@
                                 color: 'blue'
                             }
                         },
-                        data: [320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320, 320]
+                        data: []
                     }
                 ]
             }
-        })
+        }),
+        watch : {
+            goal : function (value) {
+                this.options.series[1].data = Array(31).fill(value)
+            },
+            fund : function (value) {
+                this.options.series[0].data = value.data
+                this.options.xAxis.data = value.labels
+            },
+        },
+        created() {
+
+        }
     }
 </script>
 

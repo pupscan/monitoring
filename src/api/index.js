@@ -14,7 +14,26 @@ export default {
         return Promise.all([
             HTTP.get('/facebook/favorites'),
             HTTP.get('/facebook/followers'),
-            HTTP.get('/twitter/last')
+            HTTP.get('/facebook/last')
         ]).then(data => ({likes: data[0].data.current, favorites: data[1].data.current, last: data[2].data}))
-    }
+    },
+    indiegogo: () => {
+        return Promise.all([
+            HTTP.get('/indiegogo/collect'),
+            HTTP.get('/indiegogo/collect/month'),
+            HTTP.get('/indiegogo/collect/month/total'),
+            HTTP.get('/indiegogo/backers'),
+            HTTP.get('/indiegogo/backers/month'),
+            HTTP.get('/indiegogo/goal/month'),
+            HTTP.get('/indiegogo/reached/month'),
+        ]).then(data => ({
+            collect: data[0].data.current,
+            collectMonth: data[1].data,
+            collectTotalMonth: data[2].data,
+            backers: data[3].data.current,
+            backersMonth: data[4].data,
+            goalMonth: data[5].data,
+            goalMonthReached: data[6].data,
+        }))
+    },
 }

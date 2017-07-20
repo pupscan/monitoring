@@ -3,4 +3,5 @@ export const fetchAll = ({dispatch}) => {
     dispatch('fetchTotalBacker')
     dispatch('fetchTwitter')
     dispatch('fetchFacebook')
+    dispatch('fetchIndiegogo')
 }

@@ -4,6 +4,7 @@ import totalFund from './modules/total-fund'
 import totalBacker from './modules/total-backer'
 import twitter from './modules/twitter'
 import facebook from './modules/facebook'
+import indiegogo from './modules/indiegogo'
 import * as actions from './actions'
 import logger from './plugins/logger'
 
@@ -17,7 +18,8 @@ export default new Vuex.Store({
         totalFund,
         totalBacker,
         twitter,
-        facebook
+        facebook,
+        indiegogo,
     },
     strict: debug,
     plugins: debug ? [logger()] : []
