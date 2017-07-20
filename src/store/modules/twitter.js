@@ -3,13 +3,15 @@ import stats from '../../api'
 const state = {
     likes: 0,
     followers: 0,
-    status: 'loaded'
+    status: 'loaded',
+    last: []
 }
 
 const getters = {
     twitterLikes: state => state.likes,
     twitterFollowers: state => state.followers,
-    twitterStatus: state => state.status
+    twitterStatus: state => state.status,
+    twitterLast: state => state.last
 }
 
 const actions = {
@@ -29,6 +31,7 @@ const mutations = {
         state.status = 'loaded'
         state.likes = twitter.likes
         state.followers = twitter.followers
+        state.last = twitter.last
     },
     ['ERROR_LOAD_TWITTER'] (state) {
         state.status = 'error'

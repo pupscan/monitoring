@@ -3,13 +3,15 @@ import stats from '../../api'
 const state = {
     likes: 0,
     favorites: 0,
-    status: 'loaded'
+    status: 'loaded',
+    last: []
 }
 
 const getters = {
     facebookLikes: state => state.likes,
     facebookFavorites: state => state.favorites,
-    facebookStatus: state => state.status
+    facebookStatus: state => state.status,
+    facebookLast: state => state.last
 }
 
 const actions = {
@@ -29,6 +31,7 @@ const mutations = {
         state.status = 'loaded'
         state.likes = facebook.likes
         state.favorites = facebook.favorites
+        state.last = facebook.last
     },
     ['ERROR_LOAD_FACEBOOK'] (state) {
         state.status = 'error'

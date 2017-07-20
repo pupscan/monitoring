@@ -2,7 +2,7 @@
     <div class="social-box twitter">
         <i class="fa fa-twitter social-icon"></i>
         <div class="chart-wrapper">
-            <social-chart :data="[65, 59, 84, 84, 51, 55, 40, 59, 84, 84, 51, 55, 40, 59, 84, 84, 51, 55, 40]"/>
+            <social-chart v-if="status=='loaded'" :data="last"/>
         </div>
         <ul>
             <li>
@@ -36,10 +36,11 @@
             ...mapGetters({
                 likes: 'twitterLikes',
                 followers: 'twitterFollowers',
+                last: 'twitterLast',
                 status: 'twitterStatus'
             })
         },
-        created () {
+        created() {
             this.$store.dispatch('fetchTwitter')
         }
     }

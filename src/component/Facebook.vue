@@ -2,7 +2,7 @@
     <div class="social-box facebook">
         <i class="fa fa-facebook social-icon"></i>
         <div class="chart-wrapper">
-            <social-chart :data="[65, 59, 84, 84, 51, 55, 40, 59, 84, 84, 51, 55, 40, 59, 84, 84, 51, 55, 40]"/>
+            <social-chart v-if="status=='loaded'" :data="last"/>
         </div>
         <ul>
             <li>
@@ -36,6 +36,7 @@
             ...mapGetters({
                 likes: 'facebookLikes',
                 favorites: 'facebookFavorites',
+                last: 'facebookLast',
                 status: 'facebookStatus'
             })
         },
