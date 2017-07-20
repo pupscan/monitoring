@@ -23,6 +23,7 @@
                 <indiegogo></indiegogo>
             </div>
             <div class="col-md-12 col-xl-6">
+                <kisskissbankbank></kisskissbankbank>
             </div>
         </div>
     </div>
@@ -30,6 +31,7 @@
 
 <script>
     import Indiegogo from './component/Indiegogo'
+    import Kisskissbankbank from './component/Kisskissbankbank'
     import TotalFund from './component/TotalFund'
     import TotalBacker from './component/TotalBacker'
     import Twitter from './component/Twitter'
@@ -46,6 +48,7 @@
             TotalFund,
             TotalBacker,
             Indiegogo,
+            Kisskissbankbank,
         },
         created() {
             setInterval(function () {

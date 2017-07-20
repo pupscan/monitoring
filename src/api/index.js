@@ -36,4 +36,23 @@ export default {
             goalMonthReached: data[6].data,
         }))
     },
+    kisskissbankbank: () => {
+        return Promise.all([
+            HTTP.get('/kkbb/collect'),
+            HTTP.get('/kkbb/collect/month'),
+            HTTP.get('/kkbb/collect/month/total'),
+            HTTP.get('/kkbb/backers'),
+            HTTP.get('/kkbb/backers/month'),
+            HTTP.get('/kkbb/goal/month'),
+            HTTP.get('/kkbb/reached/month'),
+        ]).then(data => ({
+            collect: data[0].data.current,
+            collectMonth: data[1].data,
+            collectTotalMonth: data[2].data,
+            backers: data[3].data.current,
+            backersMonth: data[4].data,
+            goalMonth: data[5].data,
+            goalMonthReached: data[6].data,
+        }))
+    },
 }

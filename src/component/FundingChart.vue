@@ -24,7 +24,7 @@
 
     function kFormatter(num) {
         if (num === 0) return ''
-        return num > 999 ? (num/1000).toFixed(0) + 'k' : num
+        return num > 999 ? (num/1000).toFixed(1) + 'k' : num
     }
 
     export default {
@@ -67,7 +67,6 @@
                 },
                 yAxis:
                     {
-                        max: 50000,
                         splitNumber: 4,
                         axisLine: {
                             lineStyle: {
@@ -106,8 +105,7 @@
                                 formatter: (params) => kFormatter(params.value),
                                 textStyle: {
                                     color: brandInfo,
-                                    fontWeight: 'bold',
-                                    fontSize: 17,
+                                    fontSize: 12,
                                 }
                             }
                         },
