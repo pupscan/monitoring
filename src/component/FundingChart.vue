@@ -178,7 +178,7 @@
         }),
         watch: {
             goal: function (value) {
-                this.options.series[2].data = Array(31).fill(value)
+                this.options.series[2].data = new Array(31).fill(value)
             },
             fund: function (value) {
                 this.options.series[0].data = value.data
