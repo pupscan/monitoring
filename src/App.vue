@@ -98,7 +98,8 @@
     import Twitter from './component/Twitter'
     import Facebook from './component/Facebook'
 
-    const refreshIntervalInMs = (process.env.REFRESH_INTERVAL_S || 10) * 1000
+    const debug = process.env.NODE_ENV !== 'production'
+    const refreshIntervalInMs = (debug ? 10 : 300) * 1000 // 10 seconds or 5 minutes
 
     export default {
         name: 'dashboard',
