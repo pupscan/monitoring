@@ -4,6 +4,7 @@ import stats from '../../api'
 const state = {
     collect: 0,
     collectMonth: {labels: [], data: []},
+    collectMonthCurrent: {labels: [], data: []},
     collectTotalMonth: 0,
     backers: 0,
     backersMonth: {labels: [], data: []},
@@ -15,6 +16,7 @@ const state = {
 const getters = {
     kisskissbankbankCollect: state => state.collect,
     kisskissbankbankCollectMonth: state => state.collectMonth,
+    kisskissbankbankCollectMonthCurrent: state => state.collectMonthCurrent,
     kisskissbankbankCollectTotalMonth: state => state.collectTotalMonth,
     kisskissbankbankBackers: state => state.backers,
     kisskissbankbankBackersMonth: state => state.backersMonth,
@@ -39,6 +41,7 @@ const mutations = {
     ['UPDATE_KISSKISSBANKBANK'](state, {kisskissbankbank}) {
         state.collect = kisskissbankbank.collect
         state.collectMonth = kisskissbankbank.collectMonth
+        state.collectMonthCurrent = kisskissbankbank.collectMonthCurrent
         state.collectTotalMonth = kisskissbankbank.collectTotalMonth
         state.backers = kisskissbankbank.backers
         state.backersMonth = kisskissbankbank.backersMonth

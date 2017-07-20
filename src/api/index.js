@@ -21,6 +21,7 @@ export default {
         return Promise.all([
             HTTP.get('/indiegogo/collect'),
             HTTP.get('/indiegogo/collect/month'),
+            HTTP.get('/indiegogo/collect/month/current'),
             HTTP.get('/indiegogo/collect/month/total'),
             HTTP.get('/indiegogo/backers'),
             HTTP.get('/indiegogo/backers/month'),
@@ -29,17 +30,19 @@ export default {
         ]).then(data => ({
             collect: data[0].data.current,
             collectMonth: data[1].data,
-            collectTotalMonth: data[2].data,
-            backers: data[3].data.current,
-            backersMonth: data[4].data,
-            goalMonth: data[5].data,
-            goalMonthReached: data[6].data,
+            collectMonthCurrent: data[2].data,
+            collectTotalMonth: data[3].data,
+            backers: data[4].data.current,
+            backersMonth: data[5].data,
+            goalMonth: data[6].data,
+            goalMonthReached: data[7].data,
         }))
     },
     kisskissbankbank: () => {
         return Promise.all([
             HTTP.get('/kkbb/collect'),
             HTTP.get('/kkbb/collect/month'),
+            HTTP.get('/kkbb/collect/month/current'),
             HTTP.get('/kkbb/collect/month/total'),
             HTTP.get('/kkbb/backers'),
             HTTP.get('/kkbb/backers/month'),
@@ -48,11 +51,12 @@ export default {
         ]).then(data => ({
             collect: data[0].data.current,
             collectMonth: data[1].data,
-            collectTotalMonth: data[2].data,
-            backers: data[3].data.current,
-            backersMonth: data[4].data,
-            goalMonth: data[5].data,
-            goalMonthReached: data[6].data,
+            collectMonthCurrent: data[2].data,
+            collectTotalMonth: data[3].data,
+            backers: data[4].data.current,
+            backersMonth: data[5].data,
+            goalMonth: data[6].data,
+            goalMonthReached: data[7].data,
         }))
     },
 }

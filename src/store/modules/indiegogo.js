@@ -4,6 +4,7 @@ import stats from '../../api'
 const state = {
     collect: 0,
     collectMonth: {labels: [], data: []},
+    collectMonthCurrent: {labels: [], data: []},
     collectTotalMonth: 0,
     backers: 0,
     backersMonth: {labels: [], data: []},
@@ -15,6 +16,7 @@ const state = {
 const getters = {
     indiegogoCollect: state => state.collect,
     indiegogoCollectMonth: state => state.collectMonth,
+    indiegogoCollectMonthCurrent: state => state.collectMonthCurrent,
     indiegogoCollectTotalMonth: state => state.collectTotalMonth,
     indiegogoBackers: state => state.backers,
     indiegogoBackersMonth: state => state.backersMonth,
@@ -39,6 +41,7 @@ const mutations = {
     ['UPDATE_INDIEGOGO'](state, {indiegogo}) {
         state.collect = indiegogo.collect
         state.collectMonth = indiegogo.collectMonth
+        state.collectMonthCurrent = indiegogo.collectMonthCurrent
         state.collectTotalMonth = indiegogo.collectTotalMonth
         state.backers = indiegogo.backers
         state.backersMonth = indiegogo.backersMonth

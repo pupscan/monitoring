@@ -38,7 +38,7 @@
     import Facebook from './component/Facebook'
 
     const debug = process.env.NODE_ENV !== 'production'
-    const refreshIntervalInMs = (debug ? 20 : 300) * 1000 // 10 seconds or 5 minutes
+    const refreshIntervalInMs = (debug ? 60 : 300) * 1000 // 60 seconds or 5 minutes
 
     export default {
         name: 'dashboard',

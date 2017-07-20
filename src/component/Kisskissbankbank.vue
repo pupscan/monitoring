@@ -5,7 +5,8 @@
                   :fund-goal="goalMonth | number(0, '$ ')"
                   :fund-reached="goalMonthReached | number(0, '', ' %')"
                   :fund-goal-chart="goalMonth"
-                  :fund-total-month="collectMonth"></crowdfunding>
+                  :fund-total-month="collectMonth"
+                  :fund-current-chart="collectMonthCurrent"></crowdfunding>
 </template>
 
 <script>
@@ -18,6 +19,7 @@
             ...mapGetters({
                 collect: 'kisskissbankbankCollect',
                 collectMonth: 'kisskissbankbankCollectMonth',
+                collectMonthCurrent: 'kisskissbankbankCollectMonthCurrent',
                 collectTotalMonth: 'kisskissbankbankCollectTotalMonth',
                 backers: 'kisskissbankbankBackers',
                 goalMonth: 'kisskissbankbankGoalMonth',

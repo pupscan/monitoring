@@ -7,12 +7,12 @@
 <script>
     import IEcharts from 'vue-echarts-v3/src/full.vue'
 
-    // const brandPrimary = '#20a8d8'
+    const brandPrimary = '#20a8d8'
     const brandSuccess = '#31bd6e'
     const brandInfo = '#63c2de'
     const brandDanger = '#f86c6b'
 
-    function convertHex(hex, opacity) {
+    function convertHex (hex, opacity) {
         hex = hex.replace('#', '')
         const r = parseInt(hex.substring(0, 2), 16)
         const g = parseInt(hex.substring(2, 4), 16)
@@ -22,13 +22,13 @@
         return result
     }
 
-    function kFormatter(num) {
+    function kFormatter (num) {
         if (num === 0) return ''
-        return num > 999 ? (num/1000).toFixed(1) + 'k' : num
+        return num > 999 ? (num / 1000).toFixed(1) + 'k' : num
     }
 
     export default {
-        props: ['status', 'goal', 'fund'],
+        props: ['status', 'goal', 'fund', 'fundCurrent'],
         components: {
             IEcharts
         },
@@ -65,7 +65,7 @@
                     },
                     data: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31']
                 },
-                yAxis:
+                yAxis: [
                     {
                         splitNumber: 4,
                         axisLine: {
@@ -91,11 +91,43 @@
                             }
                         }
                     },
+                    {
+                        show: false
+                    }],
                 series: [
                     {
-                        name: 'Funds',
-                        type: 'bar',
+                        name: 'Total funds',
+                        type: 'line',
                         smooth: true,
+                        symbol: 'none',
+                        sampling: 'average',
+                        label: {
+                            normal: {
+                                show: false,
+                                position: 'top',
+                                formatter: (params) => kFormatter(params.value),
+                                textStyle: {
+                                    color: brandSuccess,
+                                    fontSize: 12,
+                                }
+                            }
+                        },
+                        itemStyle: {
+                            normal: {
+                                color: convertHex(brandSuccess, 10)
+                            }
+                        },
+                        areaStyle: {
+                            normal: {
+                                color: convertHex(brandSuccess, 10)
+                            }
+                        },
+                        data: [],
+                    },
+                    {
+                        name: 'Current funds',
+                        type: 'bar',
+                        yAxisIndex: 1,
                         symbol: 'none',
                         sampling: 'average',
                         label: {
@@ -111,7 +143,7 @@
                         },
                         itemStyle: {
                             normal: {
-                                color: brandInfo
+                                color: brandInfo,
                             }
                         },
                         areaStyle: {
@@ -144,16 +176,19 @@
                 ]
             }
         }),
-        watch : {
-            goal : function (value) {
-                this.options.series[1].data = Array(31).fill(value)
+        watch: {
+            goal: function (value) {
+                this.options.series[2].data = Array(31).fill(value)
             },
-            fund : function (value) {
+            fund: function (value) {
                 this.options.series[0].data = value.data
                 this.options.xAxis.data = value.labels
             },
+            fundCurrent: function (value) {
+                this.options.series[1].data = value.data
+            },
         },
-        created() {
+        created () {
 
         }
     }
