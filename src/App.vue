@@ -14,10 +14,8 @@
                 <total-backer-box></total-backer-box>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xl-3">
-            </div>
-        </div>
+
+        <indiegogo-box></indiegogo-box>
 
     </div>
 </template>
@@ -30,10 +28,11 @@
     import FacebookBox from './component/FacebookBox'
     import TwitterBox from './component/TwitterBox'
     import TotalFundBox from './component/TotalFundBox'
+    import IndiegogoBox from './component/IndiegogoBox'
 
 
     const debug = process.env.NODE_ENV !== 'production'
-    const refreshIntervalInMs = (debug ? 600 : 300) * 1000 // 60 seconds or 5 minutes
+    const refreshIntervalInMs = (debug ? 6000 : 600) * 1000 // 60 seconds or 5 minutes
 
     export default {
         name: 'dashboard',
@@ -41,13 +40,14 @@
             FacebookBox,
             TotalFundBox,
             TotalBackerBox,
+            IndiegogoBox,
             Indiegogo,
             Kisskissbankbank,
             TwitterBox,
         },
         created() {
             setInterval(function () {
-                //this.$store.dispatch('fetchAll')
+                this.$store.dispatch('fetchAll')
             }.bind(this), refreshIntervalInMs);
         }
     }

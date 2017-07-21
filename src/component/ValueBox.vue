@@ -30,12 +30,15 @@
     .box {
         background-color: red;
         color: #ffffff;
-        padding: 20px 20px 0px;
+        padding: 10px 20px 0px;
+        margin-bottom: 20px;
+        height: 230px;
 
         .header {
 
             .title {
                 margin-top: 15px;
+                margin-bottom: 15px;
                 font-size: 1.8vw;
                 opacity: 0.7;
             }
@@ -51,7 +54,8 @@
         }
 
         .body {
-            font-size: 6vw;
+            line-height: 160%;
+            font-size: 4.7vw;
         }
 
     }
