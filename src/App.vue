@@ -17,6 +17,7 @@
 
         <indiegogo-box></indiegogo-box>
 
+        <k-k-b-b-box></k-k-b-b-box>
     </div>
 </template>
 
@@ -29,6 +30,8 @@
     import TwitterBox from './component/TwitterBox'
     import TotalFundBox from './component/TotalFundBox'
     import IndiegogoBox from './component/IndiegogoBox'
+    import KKBBBox from './component/KKBBBox'
+
 
 
     const debug = process.env.NODE_ENV !== 'production'
@@ -44,6 +47,7 @@
             Indiegogo,
             Kisskissbankbank,
             TwitterBox,
+            KKBBBox,
         },
         created() {
             setInterval(function () {

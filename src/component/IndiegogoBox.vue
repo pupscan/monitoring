@@ -1,6 +1,11 @@
 <template>
     <div class="row">
         <div class="col-xl-3">
+            <value-box :status="status" title="Fund" color="#EB1478" icon="usd">
+                {{ collect | number(0, '$ ') }}
+            </value-box>
+        </div>
+        <div class="col-xl-3">
             <value-box :status="status" title="Month fund" color="#EB1478" icon="usd">
                 {{ collectTotalMonth | number(0, '$ ')}}
             </value-box>
@@ -11,12 +16,7 @@
             </value-box>
         </div>
         <div class="col-xl-3">
-            <value-box :status="status" title="Today fund" color="#EB1478" icon="usd">
-                {{ collect | number(0, '$ ')}}
-            </value-box>
-        </div>
-        <div class="col-xl-3">
-            <value-box :status="status" title="Today backers" color="#EB1478" icon="users">
+            <value-box :status="status" title="Backers" color="#EB1478" icon="users">
                 {{ backers | number}}
             </value-box>
         </div>
