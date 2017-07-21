@@ -48,7 +48,7 @@
                     containLabel: true
                 },
                 xAxis: {
-                    boundaryGap: false,
+                    boundaryGap: true,
                     type: 'category',
                     axisLine: {
                         lineStyle: {
@@ -182,10 +182,10 @@
             },
             fund: function (value) {
                 this.options.series[0].data = value.data
-                this.options.xAxis.data = value.labels
             },
             fundCurrent: function (value) {
                 this.options.series[1].data = value.data
+                this.options.xAxis.data = value.labels
             },
         },
         created () {
