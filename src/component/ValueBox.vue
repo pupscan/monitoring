@@ -32,7 +32,6 @@
         color: #ffffff;
         padding: 10px 20px 0px;
         margin-bottom: 20px;
-        height: 230px;
 
         .header {
 

@@ -1,16 +1,16 @@
 <template>
     <div class="animated fadeIn">
         <div class="row">
-            <div class="col-xl-2">
+            <div class="col-md-6 col-xl-2">
                 <twitter-box></twitter-box>
             </div>
-            <div class="col-xl-2">
+            <div class="col-md-6 col-xl-2">
                 <facebook-box></facebook-box>
             </div>
-            <div class="col-xl-4">
+            <div class="col-md-6 col-xl-4">
                 <total-fund-box></total-fund-box>
             </div>
-            <div class="col-xl-4">
+            <div class="col-md-6 col-xl-4">
                 <total-backer-box></total-backer-box>
             </div>
         </div>
