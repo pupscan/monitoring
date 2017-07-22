@@ -1,5 +1,6 @@
 <template>
-    <value-box :status="status" title="Followers" color="#1DA1F2" icon="twitter">{{followers}}</value-box>
+    <value-box :status="status" title="Followers" color="#1DA1F2" icon="twitter" :data="last">{{followers}}
+    </value-box>
 </template>
 
 <script>
