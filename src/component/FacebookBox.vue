@@ -1,5 +1,5 @@
 <template>
-    <value-box :status="status" title="Likes" color="#3B5998" icon="facebook">{{likes}}</value-box>
+    <value-box :status="status" title="Likes" color="#3B5998" icon="facebook" :data="last">{{likes}}</value-box>
 </template>
 
 <script>
