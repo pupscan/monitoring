@@ -11,21 +11,21 @@
                 </loader>
             </div>
         </div>
-        <social-chart-box :data="data" :type="type"></social-chart-box>
+        <!--<social-chart-box :data="data" :type="type"></social-chart-box>-->
     </div>
 </template>
 
 <script>
     import {mapGetters} from 'vuex'
     import Loader from './Loader'
-    import SocialChartBox from './SocialChartBox'
+//    import SocialChartBox from './SocialChartBox'
 
     export default {
         name: 'value-box',
         props: ['status', 'title', 'color', 'icon', 'data', 'type'],
         components: {
             Loader,
-            SocialChartBox,
+//            SocialChartBox,
         },
     }
 </script>
