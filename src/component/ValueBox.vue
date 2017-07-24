@@ -34,6 +34,7 @@
     .box {
         color: #ffffff;
         margin-bottom: 20px;
+        height: 230px;
 
         .wrapper {
             padding: 10px 20px 0px;
