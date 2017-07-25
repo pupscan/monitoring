@@ -1,23 +1,36 @@
 <template>
     <div class="animated fadeIn">
         <div class="row">
-            <div class="col-md-6 col-xl-2">
+            <div class="col-md-6 col-xl-3">
                 <twitter-box></twitter-box>
             </div>
-            <div class="col-md-6 col-xl-2">
+            <div class="col-md-6 col-xl-3">
                 <facebook-box></facebook-box>
             </div>
-            <div class="col-md-6 col-xl-4">
-                <total-fund-box></total-fund-box>
+            <div class="col-md-6 col-xl-3">
             </div>
-            <div class="col-md-6 col-xl-4">
-                <total-backer-box></total-backer-box>
+            <div class="col-md-6 col-xl-3">
             </div>
         </div>
 
         <indiegogo-box></indiegogo-box>
 
         <k-k-b-b-box></k-k-b-b-box>
+
+        <div class="row">
+            <div class="col-md-6 col-xl-3">
+                <total-fund-box></total-fund-box>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <total-fund-month-box></total-fund-month-box>
+            </div>
+            <div class="col-md-6 col-xl-3">
+
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <total-backer-box></total-backer-box>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -29,10 +42,9 @@
     import FacebookBox from './component/FacebookBox'
     import TwitterBox from './component/TwitterBox'
     import TotalFundBox from './component/TotalFundBox'
+    import TotalFundMonthBox from './component/TotalFundMonthBox'
     import IndiegogoBox from './component/IndiegogoBox'
     import KKBBBox from './component/KKBBBox'
-
-
 
     const debug = process.env.NODE_ENV !== 'production'
     const refreshIntervalInMs = (debug ? 6000 : 600) * 1000 // 60 seconds or 5 minutes
@@ -42,6 +54,7 @@
         components: {
             FacebookBox,
             TotalFundBox,
+            TotalFundMonthBox,
             TotalBackerBox,
             IndiegogoBox,
             Indiegogo,

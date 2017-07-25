@@ -34,7 +34,7 @@
     .box {
         color: #ffffff;
         margin-bottom: 20px;
-        height: 230px;
+        height: 270px;
 
         .wrapper {
             padding: 10px 20px 0px;
@@ -50,7 +50,7 @@
                 }
 
                 .icon {
-                    font-size: 6vw;
+                    font-size: 5vw;
                     position: absolute;
                     top: 15px;
                     right: 25px;
@@ -62,7 +62,7 @@
 
         .body {
             line-height: 160%;
-            font-size: 4.7vw;
+            font-size: 4.5vw;
         }
 
     }

@@ -1,5 +1,6 @@
 export const fetchAll = ({dispatch}) => {
     dispatch('fetchTotalFund')
+    dispatch('fetchTotalFundMonth')
     dispatch('fetchTotalBacker')
     dispatch('fetchTwitter')
     dispatch('fetchFacebook')
