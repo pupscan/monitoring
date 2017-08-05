@@ -1,3 +1,3 @@
 import axios from 'axios'
 
-export default axios.create({baseURL: 'http://api.metric.pupscan.com/'})
+export default axios.create({baseURL: 'https://api.metric.pupscan.com/'})
