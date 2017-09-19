@@ -72,4 +72,8 @@
     .chart-wrapper {
         padding-top: 20px;
     }
+    
+    .body {
+        zoom: .85;
+    }
 </style>
