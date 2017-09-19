@@ -73,7 +73,7 @@
         padding-top: 20px;
     }
     
-    .body {
+    body {
         zoom: .85;
     }
 </style>
