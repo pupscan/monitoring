@@ -15,8 +15,6 @@
 
         <indiegogo-box></indiegogo-box>
 
-        <k-k-b-b-box></k-k-b-b-box>
-
         <div class="row">
             <div class="col-md-6 col-xl-3">
                 <total-fund-box></total-fund-box>
