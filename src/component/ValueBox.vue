@@ -62,7 +62,7 @@
 
         .body {
             line-height: 160%;
-            font-size: 4.5vw;
+            font-size: 4.2vw;
         }
 
     }
