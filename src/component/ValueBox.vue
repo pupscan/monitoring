@@ -34,11 +34,9 @@
     .box {
         color: #ffffff;
         margin-bottom: 20px;
-        height: 243px;
 
         .wrapper {
-            padding: 10px 20px 0px;
-            margin-bottom: -140px;
+            padding: 10px 20px 20px;
 
             .header {
 
