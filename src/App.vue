@@ -8,6 +8,7 @@
                 <facebook-box></facebook-box>
             </div>
             <div class="col-md-6 col-xl-3">
+                <gitlab-box></gitlab-box>
             </div>
             <div class="col-md-6 col-xl-3">
             </div>
@@ -33,16 +34,13 @@
 </template>
 
 <script>
-    import Indiegogo from './component/Indiegogo'
-    import Kisskissbankbank from './component/Kisskissbankbank'
-    import TotalFund from './component/TotalFund'
     import TotalBackerBox from './component/TotalBackerBox'
     import FacebookBox from './component/FacebookBox'
     import TwitterBox from './component/TwitterBox'
     import TotalFundBox from './component/TotalFundBox'
     import TotalFundMonthBox from './component/TotalFundMonthBox'
     import IndiegogoBox from './component/IndiegogoBox'
-    import KKBBBox from './component/KKBBBox'
+    import GitlabBox from './component/GitlabBox'
 
     const debug = process.env.NODE_ENV !== 'production'
     const refreshIntervalInMs = (debug ? 6000 : 600) * 1000 // 60 seconds or 5 minutes
@@ -55,10 +53,8 @@
             TotalFundMonthBox,
             TotalBackerBox,
             IndiegogoBox,
-            Indiegogo,
-            Kisskissbankbank,
             TwitterBox,
-            KKBBBox,
+            GitlabBox,
         },
         created() {
             setInterval(function () {

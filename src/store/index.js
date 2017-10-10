@@ -7,6 +7,7 @@ import twitter from './modules/twitter'
 import facebook from './modules/facebook'
 import indiegogo from './modules/indiegogo'
 import kisskissbankbank from './modules/kisskissbankbank'
+import gitlab from './modules/gitlab'
 import * as actions from './actions'
 import logger from './plugins/logger'
 
@@ -24,6 +25,7 @@ export default new Vuex.Store({
         facebook,
         indiegogo,
         kisskissbankbank,
+        gitlab
     },
     strict: debug,
     plugins: debug ? [logger()] : []

@@ -11,21 +11,18 @@
                 </loader>
             </div>
         </div>
-        <!--<social-chart-box :data="data" :type="type"></social-chart-box>-->
     </div>
 </template>
 
 <script>
     import {mapGetters} from 'vuex'
     import Loader from './Loader'
-//    import SocialChartBox from './SocialChartBox'
 
     export default {
         name: 'value-box',
-        props: ['status', 'title', 'color', 'icon', 'data', 'type'],
+        props: ['status', 'title', 'color', 'icon'],
         components: {
             Loader,
-//            SocialChartBox,
         },
     }
 </script>
@@ -36,12 +33,12 @@
         margin-bottom: 20px;
 
         .wrapper {
-            padding: 10px 20px 20px;
+            padding: 15px 15px 10px;
 
             .header {
 
                 .title {
-                    margin-top: 15px;
+                    margin-top: 0px;
                     margin-bottom: 15px;
                     font-size: 1.8vw;
                     opacity: 0.7;

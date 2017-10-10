@@ -6,5 +6,5 @@ export const fetchAll = ({dispatch}) => {
     dispatch('fetchFacebook')
     dispatch('fetchIndiegogo')
     dispatch('fetchKisskissbankbank')
-
+    dispatch('fetchGitlab')
 }
