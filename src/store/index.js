@@ -6,6 +6,7 @@ import totalBacker from './modules/total-backer'
 import twitter from './modules/twitter'
 import facebook from './modules/facebook'
 import indiegogo from './modules/indiegogo'
+import stripe from './modules/stripe'
 import kisskissbankbank from './modules/kisskissbankbank'
 import gitlab from './modules/gitlab'
 import * as actions from './actions'
@@ -25,7 +26,8 @@ export default new Vuex.Store({
         facebook,
         indiegogo,
         kisskissbankbank,
-        gitlab
+        gitlab,
+        stripe,
     },
     strict: debug,
     plugins: debug ? [logger()] : []

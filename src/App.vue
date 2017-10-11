@@ -16,6 +16,8 @@
 
         <indiegogo-box></indiegogo-box>
 
+        <stripe-box></stripe-box>
+
         <div class="row">
             <div class="col-md-6 col-xl-3">
                 <total-fund-box></total-fund-box>
@@ -41,6 +43,7 @@
     import TotalFundMonthBox from './component/TotalFundMonthBox'
     import IndiegogoBox from './component/IndiegogoBox'
     import GitlabBox from './component/GitlabBox'
+    import StripeBox from './component/StripeBox'
 
     const debug = process.env.NODE_ENV !== 'production'
     const refreshIntervalInMs = (debug ? 6000 : 600) * 1000 // 60 seconds or 5 minutes
@@ -55,6 +58,7 @@
             IndiegogoBox,
             TwitterBox,
             GitlabBox,
+            StripeBox,
         },
         created() {
             setInterval(function () {

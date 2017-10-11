@@ -7,4 +7,5 @@ export const fetchAll = ({dispatch}) => {
     dispatch('fetchIndiegogo')
     dispatch('fetchKisskissbankbank')
     dispatch('fetchGitlab')
+    dispatch('fetchStripe')
 }

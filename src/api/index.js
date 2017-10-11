@@ -40,6 +40,17 @@ export default {
             goalMonthReached: data[7].data,
         }))
     },
+    stripe: () => {
+        return Promise.all([
+            HTTP.get('/stripe/collect'),
+            HTTP.get('/stripe/collect/month/total'),
+            HTTP.get('/stripe/backers'),
+        ]).then(data => ({
+            collect: data[0].data.current,
+            collectTotalMonth: data[1].data,
+            backers: data[2].data.current,
+        }))
+    },
     kisskissbankbank: () => {
         return Promise.all([
             HTTP.get('/kkbb/collect'),
