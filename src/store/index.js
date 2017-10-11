@@ -7,6 +7,7 @@ import twitter from './modules/twitter'
 import facebook from './modules/facebook'
 import indiegogo from './modules/indiegogo'
 import stripe from './modules/stripe'
+import motion from './modules/motion'
 import kisskissbankbank from './modules/kisskissbankbank'
 import gitlab from './modules/gitlab'
 import * as actions from './actions'
@@ -28,6 +29,7 @@ export default new Vuex.Store({
         kisskissbankbank,
         gitlab,
         stripe,
+        motion,
     },
     strict: debug,
     plugins: debug ? [logger()] : []

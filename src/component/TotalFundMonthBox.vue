@@ -1,5 +1,5 @@
 <template>
-    <value-box :status="status" title="Month fund" color="#5cb85c" icon="usd">{{ total | number(0, '$ ')}}</value-box>
+    <value-box :status="status" title="Total month fund" color="#5cb85c" icon="usd">{{ total | number(0, '$ ')}}</value-box>
 </template>
 
 <script>

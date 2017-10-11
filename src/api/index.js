@@ -51,6 +51,17 @@ export default {
             backers: data[2].data.current,
         }))
     },
+    motion: () => {
+        return Promise.all([
+            HTTP.get('/motion-gallery/collect'),
+            HTTP.get('/motion-gallery/collect/month/total'),
+            HTTP.get('/motion-gallery/backers'),
+        ]).then(data => ({
+            collect: data[0].data.current,
+            collectTotalMonth: data[1].data,
+            backers: data[2].data.current,
+        }))
+    },
     kisskissbankbank: () => {
         return Promise.all([
             HTTP.get('/kkbb/collect'),

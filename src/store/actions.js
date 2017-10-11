@@ -8,4 +8,5 @@ export const fetchAll = ({dispatch}) => {
     dispatch('fetchKisskissbankbank')
     dispatch('fetchGitlab')
     dispatch('fetchStripe')
+    dispatch('fetchMotion')
 }

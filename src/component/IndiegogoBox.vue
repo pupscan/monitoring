@@ -6,8 +6,7 @@
             </value-box>
         </div>
         <div class="col-md-6 col-xl-3">
-            <value-box :status="status" title="Month fund" color="#EB1478" icon="usd"
-                       :data="collectMonthCurrent.data" type="bar">
+            <value-box :status="status" title="Month fund" color="#EB1478" icon="usd">
                 {{ collectTotalMonth | number(0, '$ ')}}
             </value-box>
         </div>
@@ -17,7 +16,7 @@
             </value-box>
         </div>
         <div class="col-md-6 col-xl-3">
-            <value-box :status="status" title="Backers" color="#EB1478" icon="users" :data="backersMonth.data">
+            <value-box :status="status" title="Backers" color="#EB1478" icon="users">
                 {{ backers | number}}
             </value-box>
         </div>

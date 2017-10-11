@@ -3,13 +3,8 @@ import stats from '../../api'
 
 const state = {
     collect: 0,
-    collectMonth: {labels: [], data: []},
-    collectMonthCurrent: {labels: [], data: []},
     collectTotalMonth: 0,
     backers: 0,
-    backersMonth: {labels: [], data: []},
-    goalMonth: 0,
-    goalMonthReached: 0,
     status: 'loaded',
 }
 
