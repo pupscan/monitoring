@@ -23,7 +23,7 @@
     }
 </script>
 <style lang="scss">
-    .total-fund-box {
+    .total-fund-box > .wrapper > .body {
        font-size: 3.6vw;
     }
 </style>
