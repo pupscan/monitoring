@@ -1,5 +1,5 @@
 <template>
-    <value-box :status="status" title="Total fund" color="#5cb85c" icon="usd">{{ total | number(0, '$ ')}}</value-box>
+    <value-box :status="status" title="Total fund" color="#5cb85c" icon="usd" class="total-fund-box">{{ total | number(0, '$ ')}}</value-box>
 </template>
 
 <script>
@@ -22,3 +22,8 @@
         }
     }
 </script>
+<style lang="scss">
+    .total-fund-box {
+       font-size: 3.6vw;
+    }
+</style>
